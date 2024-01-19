@@ -1,0 +1,18 @@
+<body>
+  <app-nav-bar></app-nav-bar>
+  <a *ngIf="isAdmin" routerLink="/teams" class="back-link">&lt; Back</a>
+  <div class="main-container">
+    <div class="proj-container">
+      <h1 class="proj-title">{{teamName}} Projects</h1>
+      <button *ngIf="isAdmin" (click)="openNewModal()" class="proj-new-button">New</button>
+      <div class="proj-component">
+        <app-project
+          *ngFor="let project of projects"
+          [project]="project"
+          (editClick)="openEditModal($event)"
+        ></app-project>
+      </div>
+    </div>
+  </div>
+  <app-modal [modalType]="modalType" (refreshList)="refreshProjects()"></app-modal>
+</body>

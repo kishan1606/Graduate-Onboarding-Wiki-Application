@@ -1,0 +1,13 @@
+<div class="home">
+    <app-nav-bar></app-nav-bar>
+    <!-- <a routerLink="/teams" class="back-link">&lt; Select Company</a> -->
+    <h1>Announcements</h1>
+    <!-- button only viewable by admins -->
+    <button class="button" *ngIf="user && user.admin" (click)="toggleModal()">New</button>
+    <div class="horizontal-line"></div>
+    <p *ngIf="announcements.length === 0">No announcements for this company, yet.</p>
+    <div class="announcements">
+        <app-announcement *ngFor="let announcement of announcements" [announcement]="announcement"></app-announcement>
+    </div>
+    <app-modal [modalType]="modalType" [announcements]="announcements"></app-modal>
+</div>

@@ -1,0 +1,71 @@
+<nav class="navbar" id="navbar">
+  <div class="container-fluid">
+    <a *ngIf="admin" class="navbar-brand" routerLink="/home">
+      <img class="logo" src="././assets/logo.svg" /> ACTING AS ADMIN
+    </a>
+    <a *ngIf="!admin" class="navbar-brand" routerLink="/home">
+      <img class="logo" src="././assets/logo.svg" />
+    </a>
+    <button
+      class="navbar-toggler"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-lg-0 nav-exposed">
+        <li
+          class="nav-item"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <hr class="solid" />
+        <li
+          *ngIf="admin"
+          class="nav-item"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <a class="nav-link" routerLink="/teams">Teams</a>
+        </li>
+        <hr *ngIf="admin" class="solid" />
+        <li
+          *ngIf="admin"
+          class="nav-item"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <a class="nav-link" routerLink="/user-registry">Users</a>
+        </li>
+        <hr *ngIf="admin" class="solid" />
+        <li
+          *ngIf="!admin"
+          class="nav-item"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <a class="nav-link" routerLink="/projects">Projects</a>
+        </li>
+        <hr *ngIf="!admin" class="solid" />
+        <li
+          class="nav-item"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <a class="nav-link logout" routerLink="null" (click)="handleLogout()">
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

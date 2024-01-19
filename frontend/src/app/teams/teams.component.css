@@ -1,0 +1,76 @@
+body {
+  background-color: #051622;
+  background-size: cover;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  background-color: #051622;
+}
+
+.left-image-navbar {
+text-align: left;
+}
+
+.right-image-burgerMenu {
+  text-align: right;
+}
+
+.page-title {
+  padding-top: 35px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #1BA098;
+}
+
+.teams-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 55px;
+
+}
+
+.create-team {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DEB992;
+  width: 290px;
+  height: 205px;
+  border-radius: 25px;
+  margin: 15px;
+  border: #DEB992 solid 3px;
+}
+
+.create-team::before, .create-team::after {
+  content: '';
+  position: absolute;
+  background-color: currentColor;
+}
+
+.create-team::before {
+  top: 50%;
+  left: 35%;
+  width: 30%;
+  height: 3px;
+  transform: translateY(-50%);
+}
+
+.create-team::after {
+  top: 35%;
+  left: 50%;
+  width: 3px;
+  height: 30%;
+  transform: translateX(-50%);
+}
+
+.modal-text {
+  font-size: 1.4em;
+  margin-top: 100px;
+}

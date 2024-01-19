@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.overlay {
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.overlay-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-form label {
+  margin-bottom: 5px;
+  color: #DEB992;
+}
+
+.team-form input[type="text"],
+.team-form textarea,
+.team-form select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #DEB992;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #DEB992;
+}
+
+.team-form button {
+  padding: 10px;
+  background-color: var(--primary-green);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-family: var(--site-font);
+}
+
+.team-form button:hover {
+  background-color: var(--secondary-green-color);
+}
+
+.select-members h2 {
+  margin-bottom: 10px;
+}
+
+.userName {
+  background-color: var(--primary-green);
+  margin: 6px;
+  padding: 3px 40px;
+  font-size: 20px;
+  border-radius: 11px;
+  color:#fff;
+  width: 40%;
+  font-family: var(--site-font);
+
+}
+
+.centeredRow {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: stretch;
+  align-self: center;
+  
+}

@@ -1,0 +1,41 @@
+<h3>Create User</h3>
+<form [formGroup]="newUserForm" (ngSubmit)="onSubmit()">
+  <div class="centeredCol">
+    <div class="centeredRow">
+      <input [ngClass]="{'red': !newUserFirstExists}" class="input" type="text" placeholder="First Name" formControlName="first">
+      <br />
+      <input [ngClass]="{'red': !newUserLastExists}" class="input" type="text" placeholder="Last Name" formControlName="last">
+      <br />
+    </div>
+    <div class="centeredRow">
+      <input [ngClass]="{'red': !validUser || !newUserUsernameExists}" class="input" type="text" placeholder="Username" formControlName="username">
+      <br />
+      <input [ngClass]="{'red': !validEmail || !newUserEmailExists}" class="input" type="email" placeholder="Email" formControlName="email">
+      <br />
+    </div>
+    <div class="centeredRow">
+      <input [ngClass]="{'red': !newUserPhoneExists}" class="input" type="text" placeholder="Phone" formControlName="phone">
+      <br />
+    </div>
+    <div class="centeredRow">
+      <input [ngClass]="{'red': !passMatch || !newUserPasswordExists}" class="input" type="password" placeholder="Password" formControlName="password">
+      <br />
+      <input [ngClass]="{'red': !passMatch}" class="input" type="password" placeholder="Confirm Password" formControlName="confirm">
+      <br />
+    </div>
+    <div class="centeredRow" style="align-items: baseline;">
+      <label class="label">Admin: </label>
+      <input class="checkbox" type="checkbox" formControlName="admin">
+      <br />
+    </div>
+    <div>
+      <div class="red" [ngClass]="{'hidden': newUserFirstExists}"><p>No First Name</p></div>
+      <div class="red" [ngClass]="{'hidden': newUserLastExists}"><p>No Last Name</p></div>
+      <div class="red" [ngClass]="{'hidden': validUser && newUserUsernameExists}"><p>Not a valid User</p></div>
+      <div class="red" [ngClass]="{'hidden': validEmail && newUserEmailExists}"><p>Not a valid Email</p></div>
+      <div class="red" [ngClass]="{'hidden': newUserPhoneExists}"><p>No Phone Number</p></div>
+      <div class="red" [ngClass]="{'hidden': passMatch && newUserPasswordExists}"><p>Passwords do not match</p></div>
+    </div>
+  </div>
+  <button>Submit</button>
+</form>

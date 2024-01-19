@@ -1,0 +1,19 @@
+<body>
+    <div class="login-container">
+        <div class="header">
+            <h1>COOK SYS</h1>
+            <p>A FINAL APP</p>
+        </div>
+        <div class="form-container">
+            <img src="assets/cooksys_logo.png" alt="Cook Sys Logo">
+            <form>
+                <input type="text" [(ngModel)]="username" id="username" name="username" required placeholder="Username">
+                <input type="password" [(ngModel)]="password" id="password" name="password" required placeholder="Password">
+            </form>
+            <div class="error" style="color: red" *ngIf="error != ''">
+                {{error}}
+            </div>
+            <button type="submit" (click)="onSubmit()">LOGIN</button>
+        </div>
+    </div>
+</body>

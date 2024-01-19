@@ -1,0 +1,35 @@
+/**
+    Color Schemes
+*/
+:root {
+  /* Page background color */
+  --primary-background-color: #051622;
+
+  /* Text Colors */
+  --primary-green: #1ba098;
+  --secondary-green-color: #157d7a;
+
+  /* Button Colors */
+  --primary-button-color: #005594;
+  --secondary-button-color: #5533ff;
+
+  /* Modal/NavBar Button Colors */
+  --primary-component-background-color: #0d3a59;
+  --primary-modal-background-color: #0b2d45;
+  --primary-modal-field-color: #deb992;
+  --primary-modal-exit-color: #f24e1e;
+
+  /* Font family for site */
+  --site-font: ourSiteFont;
+}
+
+
+body {
+  margin: 0 !important;
+  background-color: var(--primary-background-color) !important;
+}
+
+@font-face {
+  font-family: ourSiteFont;
+  src: url(./assets/Mulish.ttf);
+}

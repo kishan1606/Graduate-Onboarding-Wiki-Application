@@ -1,0 +1,15 @@
+<div class="project-wrapper horizontal-line">
+  <div class="name-timestamp">
+    <h2 class="projectName">{{ project.name }}</h2>
+    <!-- <div [ngClass]="checkStatus(project.active)" class="status">
+      {{ project.active ? "Active" : "Inactive" }}
+    </div> -->
+    <p class="timestamp">{{getTimeDifference(project.lastUpdated)}}</p>
+  </div>
+  <p class="projectDescription">{{ project.description }}</p>
+  <div class="edit-button">
+    <button *ngIf="isAdmin" (click)="openEditModal(project.id)" class="project-edit-btn">Edit</button>
+    <button *ngIf="!isAdmin" (click)="openEditModal(project.id)" class="project-edit-btn">View</button>
+  </div>
+</div>
+<!-- <app-modal [modalType]="modalType"></app-modal> -->

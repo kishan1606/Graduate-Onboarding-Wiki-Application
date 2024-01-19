@@ -1,0 +1,12 @@
+.announcement {
+    border-radius: 8px;
+    background-color: #0B2D45;
+    width: 50vw;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.date {
+    color: var(--primary-modal-field-color);
+}

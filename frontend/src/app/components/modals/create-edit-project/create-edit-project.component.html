@@ -1,0 +1,29 @@
+<div class="main-container">
+  <div *ngIf="loading" class="loading">
+    <div class="loader"></div>
+  </div>
+
+  <form
+    *ngIf="!loading"
+    [formGroup]="projectForm"
+    (ngSubmit)="onSubmit()"
+    class="form"
+  >
+    <p>Project Name</p>
+    <input
+      type="text"
+      formControlName="projectName"
+      placeholder="Enter Project Name"
+      class="project-name-container"
+    />
+    <br />
+    <p>Project Description</p>
+    <textarea
+      formControlName="projectDescription"
+      placeholder="Enter Project Description"
+      class="project-description-container"
+    ></textarea>
+    <br />
+    <button *ngIf="isAdmin" [disabled]="projectForm.get('projectName')?.value === '' || projectForm.get('projectDescription')?.value === ''">Submit</button>
+  </form>
+</div>

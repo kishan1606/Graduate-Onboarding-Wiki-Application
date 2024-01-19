@@ -1,0 +1,9 @@
+<div class="container">
+    <form class="form" [formGroup]="announcementForm" (ngSubmit)="onSubmit()">
+        <label>
+            announcement
+        </label>
+        <input type="text" formControlName="message">
+        <button>Submit</button>
+    </form>
+</div>

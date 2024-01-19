@@ -1,0 +1,74 @@
+:host {
+  width: 100%;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    width: 100%;
+  }
+  
+  .name-timestamp {
+    display: flex;
+    align-items: center;
+  }
+  /* .status{
+    font-size: 15px;
+    margin-left: 50px;
+  } */
+
+  .timestamp {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+  
+  .projectDescription {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: justify;
+  }
+  
+  .edit-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .project-edit-btn{
+    align-self: flex-end;
+    font-size: 1rem;
+    padding: 4px 55px; 
+    border-radius: 10px;
+    background-color: #DEB992;
+    color: white;
+    border: 2px solid #DEB992;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  .project-edit-btn:hover {
+    background-color: rgb(169, 140, 109);
+    border-color: rgb(169, 140, 109);
+  }
+  
+  .horizontal-line {
+    border-top: 2px solid  #DEB992; 
+  }
+  
+  .projectName{
+    margin: 0;
+    margin-right: 20px;
+    font-size: 40px;
+  }
+  
+  .active {
+    color: green;
+  }
+  
+  .inactive {
+    color: red;
+  }
+  

@@ -1,0 +1,13 @@
+<!-- team.component.html -->
+<div class="team-box" (click)="handleClick()">
+  <div class="team">
+    <h2 class="team-title">{{ teamData.name }}</h2>
+    <h2 class="team-num-projects"># Of Projects: {{ teamData.projectsCount }}</h2>
+  </div>
+  <h6 class="members-title">Members</h6>
+  <div class="members-box">
+    <ng-container *ngFor="let memberName of members" >
+      <div class="member-individual">{{ memberName }}</div>
+    </ng-container>
+  </div>
+</div>

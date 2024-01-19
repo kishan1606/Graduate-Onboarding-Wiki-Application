@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<div class="centeredCol">
+    <h1 class="light-blue-text">User Registry</h1>
+    <h5 class="light-blue-text">A general view of all your members in your orginization</h5>
+
+    <table>
+        <tr>
+            <th class="white-text">Name</th>
+            <th class="white-text">Email</th>
+            <th class="white-text">Team</th>
+            <th class="white-text">Active</th>
+            <th class="white-text">Admin</th>
+            <th class="white-text">Status</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td class="light-text"><b>{{user.firstName}} {{user.lastName}}</b></td>
+            <td class="light-text"><b>{{user.email}}</b></td>
+            <td class="light-text" *ngIf="user.teams"><div *ngFor="let team of user.teams" class="centeredCol"><b>{{team.name}}</b></div></td><td class="light-text" *ngIf="!user.teams"><b></b></td>
+            <td class="affirmative" *ngIf="user.active"><b>Yes</b></td><td class="negative" *ngIf="!user.active"><b>No</b></td>
+            <td class="affirmative" *ngIf="user.admin"><b>Yes</b></td><td class="negative" *ngIf="!user.admin"><b>No</b></td>
+            <td class="light-text"><b>{{user.status}}</b></td>
+        </tr>
+    </table>
+    <button class="button" (click)="toggleModal()">Add User</button>
+    <app-modal style="text-align: center; width: 50vh;" (addedData)="checkChildForData($event)" [modalType]="modalType"></app-modal>
+
+</div>

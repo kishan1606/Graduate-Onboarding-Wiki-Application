@@ -1,0 +1,53 @@
+.navbar {
+  background-color: #051622;
+  border-style: solid;
+  border-radius: 2px;
+  border-color: #deb992;
+  padding-bottom: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  margin: 5px 20px 5px 10px;
+}
+
+.navbar-brand {
+  color: #f24e1e;
+  font-size: 24px;
+}
+
+.nav-exposed {
+  background-color: #214864;
+  border-top: 2px solid #deb992;
+  text-align: center;
+  font-size: 48px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav-link {
+  color: #1ba098;
+}
+
+.solid {
+  border-top: 3px solid #1ba098;
+  width: 80%;
+  margin: auto;
+}
+
+.navbar-toggler {
+  background-color: #0d3a59;
+  margin-right: 20px;
+}
+
+.logout {
+  margin-bottom: 30px;
+}

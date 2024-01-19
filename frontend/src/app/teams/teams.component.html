@@ -1,0 +1,15 @@
+
+
+<app-nav-bar></app-nav-bar>
+<body>
+<h1 class="page-title">Teams</h1>
+<div class="teams-container">
+  <ng-container *ngFor="let team of teams">
+    <app-team class="team" [teamData]="team" ></app-team>
+  </ng-container>
+  <div class="create-team" (click)="toggleModal()"><p class="modal-text">Create Team</p></div>
+</div>
+  <app-modal (addedData)="checkChildForData($event)" [modalType]="modalType"></app-modal>
+</body>
+
+
